@@ -12,6 +12,15 @@
 	<h5><b><%= @person_item[:name] %></b></h5>
 	<%= @person_item[:position] %><br/>
 	<%= @person_item[:email] %><br/>
+
+	<% if @person_item[:linkedin_username] %>
+	    <a href="http://www.linkedin.com/in/<%= @person_item[:linkedin_username]%>"><img src="/images/linkedin.png" style="vertical-align:middle" alt=""/></a>
+	<% end %>
+	
+	<% if @person_item[:twitter_username] %>
+	    <a href="http://www.twitter.com/<%= @person_item[:twitter_username]%>"><img src="/images/twitter.png" style="vertical-align:middle" alt=""/></a>
+	<% end %>
+
 	
 	<% if @person_item[:cv_link] %>
 	    <b>[<a href="<%= @person_item[:cv_link]%>">cv</a>]</b>
@@ -25,14 +34,7 @@
 	    <b>[<a href="<%= @person_item[:web_link]%>">web site</a>]</b>
 	<% end %>
 	
-	<% if @person_item[:linkedin_username] %>
-	    <a href="http://www.linkedin.com/in/<%= @person_item[:linkedin_username]%>"><img src="/images/linkedin.png" style="vertical-align:middle" alt=""/></a>
-	<% end %>
-	
-	<% if @person_item[:twitter_username] %>
-	    <a href="http://www.twitter.com/<%= @person_item[:twitter_username]%>"><img src="/images/twitter.png" style="vertical-align:middle" alt=""/></a>
-	<% end %>
-	
+
 	<% if @person_item.compiled_content %>
 	    <br/><br/>
 	    <p><%= @person_item.compiled_content %></p>
