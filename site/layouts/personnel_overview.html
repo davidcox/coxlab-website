@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%= render 'html_head'%>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	<%= render 'header' %>
+	
+	<div id="container">
+		
+		<%= render 'page_title' %>
+		
+		<div class="inner_page_container">
+			<div class="portfolio_content">
+				<h3> Principal Investigator </h3>
+                
+                <div class="portfolio_grid">
+                    <%= render 'personnel_grid_item', 
+                                    :person_item => person_named('davidcox'),
+                                    :double_wide => 1 %>
+                </div>
+				
+				
+				<h3> Postdoctoral Fellows </h3>
+				
+				<div class="portfolio_grid">
+    				<%for p in postdocs %>
+    				    <%= render 'personnel_grid_item', :person_item => p %>
+    				<% end %>
+				</div>
+				
+				
+				<h3> Staff </h3>
+				
+				<div class="portfolio_grid">
+    				<%for p in staff %>
+    				    <%= render 'personnel_grid_item', :person_item => p %>
+    				<% end %>
+				</div>
+				
+				<h3> Alumni</h3>
+				
+				<div class="portfolio_grid">
+    				<%for p in alumni %>
+    				    <%= render 'personnel_grid_item', :person_item => p %>
+    				<% end %>
+				</div>
+				
+			</div><!--/portfolio_content-->
+			
+			<!-- SIDEBAR -->
+			
+			<div class="portfolio_sidebar">
+				<div class="latest_project">
+					<h4>Interested in joining us?</h4>
+					<p>We periodically have openings for Post-Doctoral Fellows, Research Assistants and Summer Students. <a href="/contact">Contact us</a> for more information.</p>
+				</div><!--/latest_project-->
+				
+			</div><!--/portfolio_sidebar-->
+		</div><!--/inner_page_container-->
+	</div><!--/container-->
+	
+	<%= render 'footer' %>
+	
+</div><!--/wrapper-->
+</body>
+</html>

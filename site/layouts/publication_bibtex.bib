@@ -1,0 +1,31 @@
+<% author_list = latexify_author_list(@item[:authors]) %>
+<% type = @item[:type] %>
+
+
+<% if type == "journal" %>
+@article{ <%= @item[:short_name] %>,
+    author={<%= author_list %>},
+    title={{<%= @item[:title] %>}},
+    journal={<%= @item[:venue] %>},    
+    <% if @item[:volume] %>volume={<%= @item[:volume] %>},<% end %>
+    <% if @item[:issue] %>number={<%= @item[:issue] %>},<% end %>
+    <% if @item[:pages] %>pages={<%= @item[:pages] %>},<% end %>
+    <% if @item[:issn] %>issn={<%= @item[:issn] %>},<% end %>
+    year={<%= @item[:year] %>}
+}
+<% elsif type == "book_chapter" %> 
+@incollection{ <%= @item[:short_name] %>,
+    author={<%= author_list %>},
+    title={{<%= @item[:title] %>}},
+    booktitle={<%= @item[:venue] %>},
+    <% if @item[:publisher] %>publisher={ <%= @item[:publisher] %> },<% end %>
+    year={<%= @item[:year] %>}
+}
+<% elsif type == "conference_paper" %>
+@inproceedings{ <%= @item[:short_name] %>,
+    author={<%= author_list %>},
+    title={{<%= @item[:title] %>}},
+    booktitle={<%= @item[:venue] %><%if @item[:subvenue]%>, <%=@item[:subvenue]%><%end%>},
+    year={<%= @item[:year] %>}
+}
+<% end %>

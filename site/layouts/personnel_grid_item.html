@@ -1,0 +1,38 @@
+
+<div
+    <%if @double_wide != nil %>
+        class="personnel_grid_item_double"
+    <%else%>
+        class="personnel_grid_item"
+    <%end%> >
+	<% if person_item[:picture] != nil%>
+	    <img src="/images/<%= @person_item[:picture]%>" class="left_pic" alt=""/>
+	<% end %>
+	<br/>
+	<h5><b><%= @person_item[:name] %></b></h5>
+	<%= @person_item[:position] %><br/>
+	<%= @person_item[:email] %><br/>
+	
+	<% if @person_item[:cv_link] %>
+	    [<a href="<%= @person_item[:cv_link]%>">cv</a>]
+	<% end %>
+	
+	<% if @person_item[:bio_link] %>
+	    [<a href="<%= @person_item[:bio_link]%>">bio</a>]
+	<% end %>
+    
+    <% if @person_item[:web_link] %>
+	    [<a href="<%= @person_item[:web_link]%>">web site</a>]
+	<% end %>
+	
+	<% if @person_item.compiled_content %>
+	    <br/><br/>
+	    <p><%= @person_item.compiled_content %></p>
+	<% end %>
+	<!--<ul>
+		<li><a href="#">webdesign</a>,</li>
+		<li><a href="#">development</a>,</li>
+		<li><a href="#">identity</a></li>
+	</ul>-->
+</div><!--/portfolio_grid_item-->
+

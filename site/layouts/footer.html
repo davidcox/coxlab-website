@@ -1,0 +1,60 @@
+<div id="footer">
+	<div class="footer_content">
+		<div class="f_info">
+			<div class="f_logo"><a href="#"><img src="/images/logo.png" alt="" /></a></div><!--/f_logo-->
+			<p>This site was created to facilitate dissemination of scientific information to the public.  Any opinions expressed herein do not necessarily reflect those of Harvard University.</p>
+			<p>These pages were programmatically generated using the nanoc static site compiler package.  For more information about how this site was constructed, see it's source on GitHub.</p>
+		</div><!--/f_info-->
+		
+		<!-- <div class="f_info tweets">
+		          <h5>Latest Tweets</h5>
+		          <spany id="twitter_update_list"></spany>
+		                          
+		          <script type="text/javascript" src="/js/twitter.js"></script>
+		          <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/neurobongo.json?callback=twitterCallback2&amp;count=4"></script>
+		      </div> --><!--/f_tweets-->
+		<div class="f_info blog">
+			<h5>Recent News</h5>
+			<% for a in sorted_articles[0..2] %>
+			    <p><%= a[:created_at]%> <a href="<%= a.identifier %>"><%= a[:title]%></a></p>
+			    <div class="line"></div>
+            <% end %>
+		</div><!--/f_blog-->
+		
+		
+		<div class="f_info blog">
+			<br/>
+			<% for a in sorted_articles[2..4] %>
+			    <p><%= a[:created_at]%> <a href="<%= a.identifier %>"><%= a[:title]%></a></p>
+			    <div class="line"></div>
+            <% end %>
+		</div>
+		
+		<!-- <div class="f_info photostream">
+		          <h5>Photostream</h5>
+		          <ul>
+		              <li><a href="#"><img src="/images/f_icon1.png" alt="" /></a></li>
+		              <li><a href="#"><img src="/images/f_icon2.png" alt="" /></a></li>
+		              <li class="margin_rpt"><a href="#"><img src="/images/f_icon3.png" alt="" /></a></li>
+		              
+		              <li><a href="#"><img src="/images/f_icon4.png" alt="" /></a></li>
+		              <li><a href="#"><img src="/images/f_icon5.png" alt="" /></a></li>
+		              <li class="margin_rpt"><a href="#"><img src="/images/f_icon6.png" alt="" /></a></li>
+		          </ul>
+		      </div> --><!--/f_info-->
+	</div><!--/footer_content-->
+	<div class="footer_bottom">
+		<div class="copyright">
+			@ Copyright 2011. <a href="#">President and Fellows of Harvard College</a>.
+		</div><!--/copyright-->
+		<div class="f_nav">
+			<ul>
+				<!-- <li><a href="#"><img src="/images/twitter.png" alt=""/></a></li> -->					
+				<li><a href="http://www.linkedin.com/in/daviddanielcox"><img src="/images/linkedin.png" alt=""/></a></li>
+				<li><a href="http://vimeo.com/user2731220"><img src="/images/vimeo.png" alt=""/></a></li>
+			</ul>
+		</div><!--/f_nav-->
+	</div><!--/footer_bottom-->
+</div><!--/footer-->
+
+<%= render 'google_analytics' %>

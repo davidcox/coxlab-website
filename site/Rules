@@ -1,0 +1,196 @@
+#!/usr/bin/env ruby
+
+# A few helpful tips about the Rules file:
+#
+# * The order of rules is important: for each item, only the first matching
+#   rule is applied.
+#
+# * Item identifiers start and end with a slash (e.g. “/about/” for the file
+#   “content/about.html”). To select all children, grandchildren, … of an
+#   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
+#   because “*” matches zero or more characters.
+
+
+compile '/assets/galleries/*/' do
+  if item.identifier.split("/").count == 4
+    filter  :kramdown
+    filter  :erb
+    layout  'gallery'
+    filter  :relativize_paths, :type => :html
+  end
+end
+
+compile '/assets/files/*/' do
+  if item.identifier.split("/").count == 4
+    filter  :kramdown
+    filter  :erb
+    layout  'file_gallery'
+    filter  :relativize_paths, :type => :html
+  end
+end
+
+compile '/assets/videos/*/' do
+  if item.identifier.split("/").count == 4
+    filter  :kramdown
+    filter  :erb
+    layout  'video_gallery'
+    filter  :relativize_paths, :type => :html
+  end
+end
+
+# Don't compile anything else in the 'assets' folder
+compile '/assets/*/' do end
+
+
+compile '/' do
+  filter :erb
+  filter :kramdown
+  layout 'index_template'
+  filter :relativize_paths, :type => :html
+end
+    
+compile '/personnel/' do
+  filter :erb
+  filter :kramdown
+  layout 'personnel_overview'
+  filter :relativize_paths, :type => :html
+end
+
+compile '/projects/subprojects/*/' do
+  filter :erb
+  filter :kramdown
+  layout 'subproject_detail'
+  filter :relativize_paths, :type => :html
+end
+
+compile '/projects/*/' do
+  filter :erb
+  filter :kramdown
+  layout 'project_detail'
+  filter :relativize_paths, :type => :html
+end
+
+compile '/projects/' do
+  filter :kramdown
+  filter :erb
+  layout 'projects_overview'
+  filter :relativize_paths, :type => :html
+end
+
+compile '/news/' do
+  filter :erb
+  filter :kramdown
+  layout 'news'
+  filter :relativize_paths, :type => :html
+end
+
+compile '/publications/' do
+  filter :erb
+  filter :kramdown
+  layout 'publications'
+  filter :relativize_paths, :type => :html
+end
+
+compile '/publications/*', :rep => :bibtex do
+  filter  :erb
+  layout  'publication_bibtex'
+end
+
+compile '/publications/*', :rep => :default do
+  filter  :erb
+  filter  :kramdown
+  layout  'publication_detail'
+  filter  :rubypants
+end
+
+
+compile '/header/' do
+  filter :erb
+end
+
+compile '/redirects/*/' do
+  filter  :erb
+  layout  'meta_refresh'
+end
+
+compile '*' do
+  filter :erb
+  filter :kramdown
+  layout 'default'
+  filter :relativize_paths, :type => :html
+end
+
+
+
+# -----------------------------------------------------------------------------
+# Route redirects
+# -----------------------------------------------------------------------------
+route '/redirects/*/' do
+  item[:old_address]
+end
+
+
+# -----------------------------------------------------------------------------
+# Route assets
+# -----------------------------------------------------------------------------
+
+# Route the galleries
+
+# route thumbnails specially
+route '/assets/galleries/*/*-thumb/' do
+  "/galleries/" + item.identifier.split("/")[3] + "/thumbs/" +
+                  item.identifier.chop.split("/")[-1] + '.' + item[:extension]
+end
+
+# route everything else
+route '/assets/galleries/*/' do
+  if item.identifier.split("/").count == 4
+    "/galleries/" + item.identifier.split('/')[3] + "/index.html"
+  else
+    "/galleries/" + (item.identifier.chop).split("/")[3..-1].join("/") + 
+                  '.' + item[:extension]
+  end
+end
+
+# route files
+route '/assets/files/*/' do
+  if item.identifier.split("/").count == 4
+    "/files/" + item.identifier.split('/')[3] + "/index.html"
+  else
+    "/files/" + (item.identifier.chop).split("/")[3..-1].join("/") + 
+                  '.' + item[:extension]
+  end
+end
+
+route '/assets/videos/*/' do
+  if item.identifier.split("/").count == 4
+    "/videos/" + item.identifier.split('/')[3] + "/index.html"
+  else
+    "/videos/" + (item.identifier.chop).split("/")[3..-1].join("/") + 
+                  '.' + item[:extension]
+  end
+end
+
+# Route the remaining assets
+route '/assets/*/' do 
+  split_up = (item.identifier.chop).split("/")
+    '/' + split_up[2] + '/' + split_up[-1] + '.' + item[:extension] 
+end
+
+# -----------------------------------------------------------------------------
+# Route the bibtex versions of publications
+# -----------------------------------------------------------------------------
+
+route '/publications/*', :rep => :bibtex do
+  '/publications/bibtex/' + item.identifier.split("/")[-1] + ".bib"
+end
+
+# -----------------------------------------------------------------------------
+# Route everything else
+# -----------------------------------------------------------------------------
+
+route '*' do
+  item.identifier + 'index.html'
+end
+
+layout '*', :erb

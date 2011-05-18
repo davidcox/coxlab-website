@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%= render 'html_head' %>
+</head>
+<body>
+<div id="wrapper">
+	
+	<%= render 'header' %>
+	
+	<div id="container">
+		<%= render 'page_title' %>
+		
+		<div class="full_width_content">
+			
+			<%= yield %>
+	
+		</div><!--/full_width_content-->
+	</div><!--/container-->
+	
+    <%= render 'small_footer' %>
+
+</div><!--/wrapper-->
+</body>
+</html>

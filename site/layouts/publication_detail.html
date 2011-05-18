@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%= render 'html_head'%>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	<%= render 'header' %>
+	
+	<div id="container">
+		
+		
+		<%= render 'page_title', :return_url => "/publications",
+		                         :return_name => "Publications" %>
+		
+		<div class="inner_page_container">
+			<div class="publications_content">
+				
+				<div>
+    				<h3>Citation</h3>
+    				<%= render 'publication_item', 
+    				           :pub_item => @item %>
+				
+    				<h3>Abstract</h3>
+    				<div class="abstract">
+        				<%= yield %>
+    				</div>
+				</div>
+ 										
+			</div><!--/project_content-->
+			
+			<!-- SIDEBAR -->
+			
+			<div class="sidebar">
+    			<!--<div class="topsearch"><input name="" type="text" value="to search type and hit enter" onfocus="if(this.value == 'to search type and hit enter'){this.value = '';}" onblur="if(this.value == ''){this.value='to search type and hit enter';}" /></div>--><!--/topsearch-->
+			
+    			<div class="copyright_notice">
+    			    <h3>Copyright Notice</h3>
+    				This material is presented to ensure timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author’s copyright. In most cases, these works may not be reposted without the explicit permission of the copyright holder.
+    			</div>
+			
+    			<div class="sidebar_list">
+    				<h4>Categories</h4>
+    				<ul>
+    				    <% for t in site_tags.keys %>
+                            <li><a href="/tags/<%= t%>"><%= t %>
+                                </a></li>
+                        <% end %>
+    				</ul>
+    			</div>
+				
+    		</div><!--/sidebar-->
+		</div><!--/inner_page_container-->
+	</div><!--/container-->
+	
+		
+	<%= render 'small_footer' %>
+	
+</div><!--/wrapper-->
+</body>
+</html>

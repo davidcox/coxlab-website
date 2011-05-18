@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%= render 'html_head'%>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	<%= render 'header' %>
+	
+	<div id="container">
+		
+		<%= render 'page_title', :return_url => "/projects",
+		                         :return_name => "Projects"%>
+		
+		<div class="inner_page_container">
+			<div class="project_content">
+				
+				<div class="project_description">
+    				<%= yield %>
+				</div>
+				
+ 										
+			</div><!--/project_content-->
+			
+			<!-- SIDEBAR -->
+			
+			<div class="portfolio_sidebar">
+				<div class="latest_project">
+					
+					<% if @item[:related_publications]%>
+					
+					<h4>Related Publications</h4>
+					
+					<ul class="sidebar_publications_list">
+					    <% for p in @item[:related_publications]%>
+    					    <% pub = publication_for_id(p) %>
+    					    <% if pub %>
+    					        <li>
+    					        <%= render 'publication_item_short', 
+    					                    :pub_item => pub %>
+    					        </li>
+    					    <% end %>
+    					<% end %>
+					</ul>
+					<% end %>
+					
+					<% if @item[:resources] %>
+					<h4>Resources</h4>
+					
+					<ul>
+					    <% for r in @item[:resources] %>
+					        <a href="<%= r[:url]%>"><%= r[:title]%></a>
+					    <% end %>
+					</ul>
+					<% end %>
+					
+				</div><!--/latest_project-->
+				
+			</div><!--/portfolio_sidebar-->
+		</div><!--/inner_page_container-->
+	</div><!--/container-->
+	
+		
+	<%= render 'small_footer' %>
+	
+</div><!--/wrapper-->
+</body>
+</html>

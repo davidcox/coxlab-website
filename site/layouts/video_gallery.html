@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%= render 'html_head'%>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	<%= render 'header' %>
+	
+	<div id="container">
+		
+		<%= render 'page_title' %>
+		
+		<div class="inner_page_container">
+			
+			<h3> Video: </h3>
+            
+			<div class="portfolio_content">
+				<div class="portfolio_grid">
+				    <ul>
+				    <% for f in @item.children %>
+                        <li>
+                          <a href="<%= f.path %>"><%= f.path %></a>
+                        </li>
+                    <% end %>
+				    
+				</div>								
+			</div><!--/portfolio_content-->
+			
+			<!-- SIDEBAR -->
+			
+			<div class="portfolio_sidebar">
+				<div class="latest_project">
+					<h4>Interested in joining us?</h4>
+					<p>We periodically have openings for Post-Doctoral Fellows, Research Assistants and Summer Students. <a href="/contact">Contact us</a> for more information.</p>
+				</div><!--/latest_project-->
+				
+			</div><!--/portfolio_sidebar-->
+		</div><!--/inner_page_container-->
+	</div><!--/container-->
+	
+	<%= render 'small_footer' %>
+	
+</div><!--/wrapper-->
+</body>
+</html>

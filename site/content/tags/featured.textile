@@ -1,0 +1,17 @@
+----- 
+:title: "Tag: featured"
+:type: page
+:filters_pre: 
+- erb
+:feed: /tags/featured/
+:feed_title: Tag 'featured'
+:permalink: featured
+-----
+
+<p>8 items are tagged with <em>featured</em>:</p>
+<ul class="tag_results">
+	<% articles_tagged_with('featured').each do |a| %>
+		<%= render 'tagged_item', :tagged_item => a %>
+	<% end %>
+</ul>
+		

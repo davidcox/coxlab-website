@@ -1,0 +1,15 @@
+
+<div class="portfolio_list_item">
+    
+    <a href="<%= @project_item.identifier %>">
+	<% if @project_item[:banner] != nil%>
+	    <img src="/images/<%= @project_item[:banner]%>" alt=""/>
+	<% end %>
+	<br/>
+	<h4><b><%= @project_item[:title] %></b></h4>
+	
+	<p><%= @project_item[:content_for_summary] %></p>
+	</a>
+	
+	<div class="read_more"><a href="<%= @project_item.identifier %>">read more</a></div>
+</div><!--/portfolio_grid_item-->

@@ -1,0 +1,26 @@
+<% if @tag_line %>
+    <% tag = @tag_line %>
+<% else %>
+    <% tag = @item[:tag_line]%>
+<% end %>
+<div class="page-title">
+    <div class="page-title-content">
+    	<div class="page-title-info left">
+    		<h1> <%= @item[:title]%> 
+    		<%if tag%>
+    		    / <span> <%= tag%></span>
+    		<%end%></h1>
+    	</div>
+    	<div class="page-title-link">
+    	    <% if @return_url %>
+    	        <% ret_url = @return_url %>
+    	        <% ret_name = @return_name %>
+    	    <% else %>
+        	    <% ret_url = "/" %>
+    	        <% ret_name = "Home" %>
+    	    <%end%>
+    		<a href="<%= ret_url %>">Back to <%= ret_name %>  &raquo;</a>
+    	</div>
+    	<p class="clr"></p>
+    </div><!--/page-title-content-->
+</div>

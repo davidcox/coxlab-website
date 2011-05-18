@@ -1,0 +1,18 @@
+
+
+<li>
+    <% if @tagged_item.identifier =~ /news\// %>
+        <span class="item_type">News item:</span>
+    <% end %>
+    
+    <% if @tagged_item.identifier =~ /publications\// %>
+        <span class="item_type">Publication:</span>
+    <% end %>    
+    
+    <% if @tagged_item.identifier =~ /projects\// %>
+        <span class="item_type">Project:</span>
+    <% end %>
+    
+    <a href="<%= @tagged_item.identifier%>">
+        <%= @tagged_item.attributes[:title]%></a> 
+</li>

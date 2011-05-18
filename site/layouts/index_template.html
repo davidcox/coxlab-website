@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Laboratory of David Cox at The Rowland Institute at Harvard</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" type="text/css" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" type="text/css" /> 
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/dropmenu.js"></script>
+<script type="text/javascript" src="js/easySlider1.7.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function(){	
+		$(".slides").easySlider({
+			auto: true, 
+			continuous: true,
+			numeric: true
+		});		
+	});	 
+</script>  
+<!--[if IE 6]><script type="text/javascript" src="js/ie6PngFix.js"></script><![endif]-->
+<!--[if gte IE 6]><div id="ie6_hack"><![endif]-->
+</head>
+
+<body>
+<div id="wrapper">
+
+    <%= render 'header' %>
+    
+	<div id="container">
+		<div class="banner_home">
+			<div class="banner_inner">
+				<div id="easySlider">	
+					<div class="container_slider">
+						<div class="slides">
+							<ul>
+								<li>
+								    <a href="/projects/computation">
+								        <img width="960" height="360" src="/images/gpu_box_banner.jpg" alt="banner" title="banner" />
+                                        <span><h4>Building computer vision systems inspired by the brain</h4>
+    								    </span>
+								    </a>
+
+								</li>
+								<li>    
+								    <a href="/projects/physiology"><img width="960" height="360" src="/images/rat_banner.jpg" alt="banner" title="banner" />
+								        <span><h4>Reverse Engineering
+								             Biological Vision </h4></span></a>
+								</li>
+								<li>    
+    								<a href="/projects/methods"><img width="960" height="360" src="/images/furnace_banner.jpg" alt="banner" title="banner" />
+    								    <span><h4>Tools for 
+    								        neuroscience</h4></span></a>
+    							</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<!--h1>Minimalisto is a clean and minimalist business site template<br/> suitable for <span>business, corporate, company</span> and any kind of websites.
+			Minimalisto is fully customizable using the theme options page.</h1-->
+		</div><!--/banner_home-->
+		<!--div class="free_quote"> <a href="#"><img src="images/click.png" alt="picture" width="186" height="32"/></a>
+			<h5>We offer a wide variety of services, for all your creative needs! Read more about <span>our services</span> here.</h5>
+			<div class="clr"></div>
+		</div-->
+		
+		<div class="home_content">
+			
+			<!-- 'ABOUT US' block -->
+            
+			<div class="aboutus_block">
+				<div class="about_column1">
+					<h4>High-Level Vision</h4>
+				    <p><%= @item[:problem_blurb]%></p>
+				</div><!--/about_column1-->
+				
+				<div class="about_column2">
+					<h4>Our Research</h4>
+					<p><%= @item[:research_blurb] %></p>
+				</div><!--/about_column2-->
+				<div class="about_column3">
+					<h4>About The Rowland Institute</h4>
+					<p><a href="http://www.rowland.harvard.edu">
+					        <img class="right_pic" 
+					             src="/images/rowland_tiny.jpg" alt=""/>
+					   </a>
+					   <%= @item[:rowland_blurb] %>
+					</p>
+				</div><!--/about_column2-->
+			</div><!--/aboutus_block-->
+			
+			
+			<!-- 'PORTFOLIO' block -->
+			
+			<div class="hr">
+				<h4>Some current projects</h4>
+				<div class="hr_line"></div><!-- #line -->
+			</div><!-- #hr -->
+			
+			<div class="project_block">
+			    
+			    <% for p in project_highlights[0..3] %>
+                    <%= render 'project_grid_item', :project_item => p %>
+                <% end %>
+                
+			</div><!--/project_block-->
+			
+			<div class="more_projects"><a href="/projects" class="continue">See more projects &mdash;&rsaquo;</a></div>
+			
+			
+			
+			
+		</div><!--/home_content-->
+	</div><!--/container-->
+	
+	
+	<%= render 'footer' %>
+	
+</div><!--/wrapper-->
+</body>
+</html>

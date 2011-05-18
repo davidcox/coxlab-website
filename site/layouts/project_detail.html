@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%= render 'html_head'%>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	<%= render 'header' %>
+	
+	<div id="container">
+		
+		<%= render 'page_title', :return_url => "/projects",
+		                         :return_name => "Projects"%>
+		
+		<div class="inner_page_container">
+			<div class="project_content">
+				
+				<div class="project_description">
+    				<%= yield %>
+				</div>
+				
+ 										
+			</div><!--/project_content-->
+			
+			<!-- SIDEBAR -->
+			
+			<div class="portfolio_sidebar">
+				<div class="latest_project">
+					<h4>Related Publications</h4>
+					
+					<ul class="sidebar_publications_list">
+					    <% for p in @item[:related_publications]%>
+    					    <% pub = publication_for_id(p) %>
+    					    <% if pub %>
+    					        <li>
+    					        <%= render 'publication_item_short', 
+    					                    :pub_item => pub %>
+    					        </li>
+    					    <% end %>
+    					<% end %>
+					</ul>
+				</div><!--/latest_project-->
+				
+			</div><!--/portfolio_sidebar-->
+		</div><!--/inner_page_container-->
+	</div><!--/container-->
+	
+	
+	<h3>Related Projects</h3>  
+    <div class="portfolio_grid"> 
+	    <% for sp in subprojects_with_tag(@item[:short_name])%>
+	        <% next if sp[:highlight_picture].nil?%>
+		    <%= render 'project_grid_item', :project_item => sp %>
+		<% end %>
+	</div>
+	
+	<%= render 'footer' %>
+	
+</div><!--/wrapper-->
+</body>
+</html>

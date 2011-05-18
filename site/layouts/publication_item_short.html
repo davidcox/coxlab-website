@@ -1,0 +1,20 @@
+<!-- Authors -->
+<% authors = @pub_item[:authors]%>
+
+<a href="<%= @pub_item.identifier %>">
+<% if authors != nil %>
+    <% for author in @pub_item[:authors ]%>
+        <% if author =~ /David.+Cox/%>
+            <span class="ddc"><%= author %></span>
+        <% else %>
+            <%= author %><% end %><% if authors.find_index(author) != authors.length - 1 %>,<%end%>
+        
+    <% end %>
+<% end %>
+
+<!-- Year -->
+(<%= @pub_item[:year] %>)
+
+<!-- Title -->
+<span class="title"><%=@pub_item[:title]%></span>
+</a>

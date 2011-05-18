@@ -1,0 +1,62 @@
+<div class="publication">
+
+<!-- Authors -->
+<% authors = @pub_item[:authors]%>
+
+<% if authors != nil %>
+    <% for author in @pub_item[:authors ]%>
+        <% if author =~ /David.+Cox/%>
+            <span class="ddc"><%= author %></span>
+        <% else %>
+            <%= author %><% end %><% if authors.find_index(author) != authors.length - 1 %>,<%end%>
+        
+    <% end %>
+<% end %>
+
+<!-- Year -->
+(<%= @pub_item[:year] %>)
+<br/>
+
+<!-- Title -->
+<span class="title"><%=@pub_item[:title]%></span>
+<br/>
+
+<!-- Publication venue -->
+<% if @pub_item[:type] == 'book_chapter'%>
+    in
+<% end %>
+
+<%= @pub_item[:venue] %><%if @pub_item[:subvenue]%>,<%= @pub_item[:subvenue] %><% end %>
+
+<% if @pub_item[:volume]%>
+    <%= @pub_item[:volume] %>
+    <% if @pub_item[:issue]%>(<%= @pub_item[:issue]%>)<% end %><% if @pub_item[:pages] %>: <%= @pub_item[:pages]%><% end %>
+<% end %>
+
+<% if @pub_item[:type] == 'book_chapter' && @pub_item[:publisher]%>
+    , published by <%= @pub_item[:publisher]%>
+<% end %> <br/>
+
+<% if @pub_item[:pdf] %>
+    [<a href="/pdfs/<%= @pub_item[:pdf] %>">PDF</a>]
+<% end %>
+
+<% if @pub_item[:link] %>
+    [<a href="<%= @pub_item[:link] %>">link</a>]
+<% end %>
+
+[<a href="/publications/bibtex/<%= @pub_item.identifier.split("/")[-1]%>.bib">bibtex</a>]
+
+<% if @pub_item[:PMID] %>
+    [<a href="http://www.ncbi.nlm.nih.gov/pubmed/<%= @pub_item[:PMID] %>">pubmed</a>]
+<% end %>
+
+<% if @pub_item[:supplemental_links] %>
+    <% for l in @pub_item[:supplemental_links] %>
+        [<a href="<%= l[:url]%>"><%= l[:title]%></a>] 
+    <% end %>
+<% end %>
+
+[<a href="<%= @pub_item.identifier %>">more info</a>]
+
+</div>

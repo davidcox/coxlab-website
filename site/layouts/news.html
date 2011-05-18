@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%= render 'html_head' %>
+</head>
+<body>
+<div id="wrapper">
+	
+	<%= render 'header'%>
+	
+	<div id="container">
+		
+		<%= render 'page_title'%>
+		
+		<div class="blog_content">
+				
+			<% for article in sorted_articles %>
+    			<div class="blog_content_inner blogBackrpt">
+				<% if article[:picture] != nil %>
+    				<img src="/images/<%= article[:picture]%>" width="600" alt="" />
+    			<% end %>
+				<div class="meta_box">
+					<ul>
+						<li><%= article[:created_at]%> - </li>
+						<% for tag in article[:tags] %>
+						    <li><%= tag %></li>
+						<% end %>
+					</ul>
+				</div><!--/meta_box-->
+                <% if article[:picture] == nil %>
+                    <div class="blog_info_offset">
+                <%else%>
+    				<div class="blog_info">
+    		    <%end%>
+    					<h2><a href="#"><%= article[:title]%></a></h2>
+    					<p><%= article.compiled_content %></p>
+    					<!-- <a href="#" class="continue">Continue Reading &mdash;&rsaquo;</a> -->
+    				</div><!--/blog_info-->
+    			</div><!--/blog_content_inner-->
+    		<% end %>	
+    		
+			<!--<ul class="pagination">
+				<li><a href="#">&lt;</a></li>
+				<li><a href="#">1</a></li>
+				<li>/</li>
+				<li><a href="#">2</a></li>
+				<li>/</li>
+				<li><a href="#">3</a></li>
+				<li>/</li>
+				<li><a href="#">4</a></li>
+				<li>/</li>
+				<li><a href="#">5</a></li>
+				<li>/</li>
+				<li><a href="#">6</a></li>
+				<li>/</li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">&gt;</a></li>
+			</ul>-->
+		</div><!--/blog_content-->
+		
+		<div class="sidebar">
+			<!-- <div class="topsearch"><input name="" type="text" value="to search type and hit enter" onfocus="if(this.value == 'to search type and hit enter'){this.value = '';}" onblur="if(this.value == ''){this.value='to search type and hit enter';}" /></div> --><!--/topsearch-->
+			<div class="sidebar_list">
+				<h4>Categories</h4>
+				<ul>
+				    <% for t in site_tags.keys %>
+                        <li><a href="/tags/<%= t%>"><%= t %>
+                            </a></li>
+                    <% end %>
+				</ul>
+				<!--<h4>Pages</h4>
+				<ul>
+				                    <li><a href="#" class="active">About</a></li>
+				                    <li><a href="#">Portfolio</a></li>
+				                    <li><a href="#">Contact</a></li>
+				                </ul> -->
+				<!--<h4>Archives</h4>
+				<ul>
+					<li><a href="#" class="active">February</a></li>
+					<li><a href="#">January</a></li>
+					<li><a href="#">December</a></li>
+				</ul>
+				<h4>Popular Posts</h4>
+				<div class="posts">
+					<a href="#">Lorem ipsum dolor sit ameeet, ipsum it consectetuer adipiscing elitest ...</a>
+					<span>January 22, 2011 - <a href="#" class="active">12 Comments</a></span>
+				</div>
+				<div class="posts">
+					<a href="#">Lorem ipsum dolor sit ameeet, ipsum it consectetuer adipiscing elitest ...</a>
+					<span>January 22, 2011 - <a href="#">12 Comments</a></span>
+				</div>
+				<div class="posts posts01">
+					<a href="#">Lorem ipsum dolor sit ameeet, ipsum it consectetuer adipiscing elitest ...</a>
+					<span>January 22, 2011 - <a href="#">12 Comments</a></span>
+				</div>
+				<h4>Photostream</h4>
+				<ul class="blog_photostream">
+					<li><a href="#"><img src="images/f_icon1.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/f_icon2.png" alt="" /></a></li>
+					<li class="margin_rpt"><a href="#"><img src="images/f_icon3.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/f_icon4.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/f_icon5.png" alt="" /></a></li>
+					<li class="margin_rpt"><a href="#"><img src="images/f_icon6.png" alt="" /></a></li>
+				</ul>
+			</div>--><!--/sidebar_list-->
+		</div><!--/sidebar-->
+		<div class="clr"></div>
+	</div><!--/container-->
+	
+	<%= render 'footer'%>
+</div><!--/wrapper-->
+</body>
+</html>

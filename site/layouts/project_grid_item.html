@@ -1,0 +1,12 @@
+
+<div class="portfolio_grid_item">
+    <a href="<%= @project_item.identifier %>">
+	<% if @project_item[:highlight_picture] != nil%>
+	    <img src="/galleries/projects/<%= @project_item[:highlight_picture]%>" alt=""/>
+	<% end %>
+	<br/>
+	<h5><%= @project_item[:title] %></h5>
+	</a>
+	
+</div><!--/portfolio_grid_item-->
+

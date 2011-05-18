@@ -1,0 +1,11 @@
+---
+title:                  Visual Neurophysiology
+related_publications:   ["2010_zoccolan_frontiers", "2009_zoccolan_pnas", "2008_cox_jneurosci"]
+tags:                   [physiology]
+highlight_picture:      neuron_220x160.jpg
+active:                 false
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque, eros a hendrerit laoreet, ante ante venenatis nibh, quis ullamcorper magna magna nec sem. Maecenas fermentum, enim at pellentesque consectetur, mauris eros laoreet augue, sed hendrerit sapien nulla a metus. Nam molestie nulla convallis urna dapibus fermentum. Donec erat sem, egestas et laoreet vitae, rhoncus vel risus. Duis suscipit fringilla ipsum, vitae faucibus diam ullamcorper vel. Duis sit amet dui id tellus accumsan sollicitudin. Integer tincidunt lacinia mi, vitae adipiscing elit ultrices gravida. Pellentesque sed egestas mauris. Morbi ac ligula risus. Nam sed enim lacus, non gravida magna. Morbi orci eros, tempus in bibendum id, dignissim quis sem. Nullam ut sem ligula, et aliquet enim. Fusce ac mauris tellus, vitae adipiscing lacus. In hac habitasse platea dictumst. Mauris faucibus placerat turpis, quis vulputate nisl malesuada sit amet. Aliquam erat volutpat.
+
+Phasellus diam leo, luctus in commodo sit amet, congue sed velit. Etiam ac ultrices tellus. Aenean malesuada tincidunt euismod. Curabitur porttitor imperdiet gravida. Maecenas diam neque, rutrum ac fringilla vitae, aliquet non nisl. Aliquam quis nulla nisl, et semper turpis. Curabitur adipiscing, justo vel vestibulum luctus, justo urna condimentum purus, a dictum lectus nibh at nisl. Proin mi quam, tempor quis vehicula a, scelerisque at lacus. Ut at quam sapien. Morbi sit amet turpis non turpis tincidunt malesuada rutrum ac est. Phasellus semper interdum porta. Suspendisse lobortis mollis odio vitae adipiscing. Sed imperdiet ultricies consectetur. Integer ac diam a diam rutrum bibendum ut eu libero. Sed at sollicitudin nisi. Pellentesque adipiscing nunc nec erat ultrices non porta lacus mollis. In volutpat, tortor nec pretium ultricies, erat neque consectetur arcu, nec viverra dolor risus non dui. Phasellus placerat fermentum ligula a malesuada. Praesent tincidunt scelerisque nisl eget mattis.
