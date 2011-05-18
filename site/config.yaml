@@ -43,3 +43,5 @@ data_sources:
 deploy:
     default:
         dst: "coxlab@coxlab.org:/home/coxlab/webapps/rjfsite"
+    live:
+        dst: "cox@webmac.rowland.org:/Users/cox/rjf_site" 

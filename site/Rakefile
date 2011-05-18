@@ -38,8 +38,9 @@ task :tags do
 
 end
 
-task :all do
+task :test_deploy do
   Rake::Task['tags'].execute
   system("nanoc compile")
   Rake::Task['deploy:rsync'].execute
 end
+
