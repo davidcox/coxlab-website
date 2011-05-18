@@ -2,7 +2,7 @@
 title:                  'An 18"x18"x18" Supercomputer'
 related_publications:   ["2009_pinto_plos", "2011_pinto_fg"]
 tags:                   [computation, "computer vision"]
-highlight_picture:      16GPUs_220x160.jpg
+highlight_picture:      16gpus_220x160.jpg
 ---
 
 **Update:** _This page is now several years old.  The system described here is still in service, though it has been eclipsed by systems with more recent GPUs.  We've left this page up for those interested in building multi-GPU systems._
