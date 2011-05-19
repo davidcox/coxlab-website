@@ -3,7 +3,7 @@ name:                   David Cox
 short_name:             davidcox
 position:               Rowland Fellow, Principal Investigator
 cv_link:                /pdfs/david_cox_cv.pdf
-linkedin_username:      daviddanielcox
+linkedin_link:          http://www.linkedin.com/in/daviddanielcox
 twitter_username:       neurobongo
 email:                  cox at rowland dot harvard dot edu
 picture:                dave.jpg

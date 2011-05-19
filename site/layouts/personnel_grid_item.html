@@ -13,8 +13,8 @@
 	<%= @person_item[:position] %><br/>
 	<%= @person_item[:email] %><br/>
 
-	<% if @person_item[:linkedin_username] %>
-	    <a href="http://www.linkedin.com/in/<%= @person_item[:linkedin_username]%>"><img src="/images/linkedin.png" style="vertical-align:middle" alt=""/></a>
+	<% if @person_item[:linkedin_link] %>
+	    <a href="<%= @person_item[:linkedin_link]%>"><img src="/images/linkedin.png" style="vertical-align:middle" alt=""/></a>
 	<% end %>
 	
 	<% if @person_item[:twitter_username] %>

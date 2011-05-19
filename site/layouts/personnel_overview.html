@@ -36,16 +36,26 @@
 				<h3> Staff </h3>
 				
 				<div class="portfolio_grid">
+				    <% i = 1 %>
     				<%for p in staff %>
     				    <%= render 'personnel_grid_item', :person_item => p %>
+    				    <% if i % 2 == 0 %>
+    				        <p class="clr"></p>
+    				    <%end%>
+    				    <%i+= 1%>
     				<% end %>
 				</div>
 				
 				<h3> Alumni</h3>
 				
 				<div class="portfolio_grid">
+				    <% i = 1 %>
     				<%for p in alumni %>
     				    <%= render 'personnel_grid_item', :person_item => p %>
+    				    <% if i % 2 == 0 %>
+    				        <p class="clr"></p>
+    				    <%end%>
+    				    <%i+= 1%>
     				<% end %>
 				</div>
 				
