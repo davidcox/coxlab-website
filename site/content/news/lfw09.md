@@ -1,6 +1,6 @@
 ---
 title:      Top of the "Leader Board" in Real World Face Recognition
-created_at: 9-1-2009 21:05
+created_at: 2009-1-9 21:05
 tags:       [computer vision]
 kind:       article
 

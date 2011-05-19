@@ -1,6 +1,6 @@
 ---
 title:      "New Paper: High-throughput Bio-inspired Computer Vision"
-created_at: 2-12-2009 14:42
+created_at: 2009-12-2 14:42
 tags:       [computer vision]
 kind:       article
 ---

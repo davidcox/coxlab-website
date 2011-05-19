@@ -1,6 +1,6 @@
 ---
 title:      New GPU Cluster
-created_at: 2-1-2009 20:59
+created_at: 2009-1-2 20:59
 tags:       [gpu, computer vision]
 kind:       article
 
