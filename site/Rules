@@ -11,6 +11,24 @@
 #   because “*” matches zero or more characters.
 
 
+preprocess do
+  news_item_years.each do |y|
+    @items << Nanoc3::Item.new(
+        "",
+        { :title => "News Items from #{y}",
+          :year  => y },
+        "/news/archive/#{y}/"
+      )
+  end
+end
+
+compile '/news/archive/*/' do
+  filter  :kramdown
+  filter  :erb
+  layout  'news'
+  filter  :relativize_paths, :type => :html
+end
+
 compile '/assets/galleries/*/' do
   if item.identifier.split("/").count == 4
     filter  :kramdown
