@@ -1,6 +1,6 @@
 ---
 title:      "New Paper: Rats as a model system for high level vision"
-created_at: 26-5-2009 23:47
+created_at: 2009-5-26 23:47
 tags:       [behavior, rodents]
 kind:       article
 
