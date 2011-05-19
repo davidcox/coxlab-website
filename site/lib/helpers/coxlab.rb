@@ -119,6 +119,18 @@ module Nanoc3::Helpers
       ext = p.split(".")[-1]
       gallery_path + "/thumbs/" + file_stem + "-thumb" + "." + ext
     end
-      
+    
+    
+    def news_item_years      
+      articles.map{ |a| Time.gm(a[:created_at]).year }.uniq!
+    end
+    
+    def news_items_for_year(y)
+      a = articles.select{ |a|  y == Time.new(a[:created_at]).year }
+      a.sort! do |a1,a2| 
+        Time.new(a1[:created_at]) <=> Time.new(a2[:created_at])
+      end
+    end
+    
   end
 end

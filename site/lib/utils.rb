@@ -1,3 +1,5 @@
+# I got this code from the H3RALD website.  Many thanks + mad props. -DDC
+
 module SiteUtils
 
 	def write_tag_page(dir, tag, count)
@@ -24,7 +26,7 @@ module SiteUtils
 	def write_tag_feed_page(dir, tag, format)
 		f = format.downcase
 		meta = {}
-		meta[:title] = "H3RALD - Tag '#{tag}' (#{format} Feed)"	
+		meta[:title] = "Cox Lab - Tag '#{tag}' (#{format} Feed)"	
 		meta[:type] = 'feed'
 		meta[:permalink] = "tags/#{tag}/#{f}"
 		contents = %{<%= #{f}_feed(:articles => articles_tagged_with('#{tag}'))%>}

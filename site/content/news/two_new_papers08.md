@@ -1,6 +1,6 @@
 ---
 title:      Two new papers
-created_at: 3-10-2008 21:06
+created_at: 2008-10-3 21:06
 tags:       [physiology, methods]
 kind:       article
 ---

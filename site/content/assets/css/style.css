@@ -1280,12 +1280,19 @@ p.quote {
 
 /******************* Pagination *******************/
 
+div.pagination {
+	padding:10px 10px; 
+	background:#fff;  
+	margin-top:5px;
+	text-align: right;
+}
+
 ul.pagination {
 	padding:0 25px; 
 	height:35px; 
 	background:#fff; 
 	width:175px; 
-	margin-top:25px;
+	margin-top:5px;
 }
 ul.pagination li {
 	float:left; 

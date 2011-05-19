@@ -10,11 +10,22 @@
 	
 	<div id="container">
 		
-		<%= render 'page_title'%>
+		<% if @item[:year] %>
+		    <%= render 'page_title',  :return_url => "/news",
+    		                         :return_name => "News"%>
+    	<% else %>
+		    <%= render 'page_title'%>
+		<% end %>
 		
 		<div class="blog_content">
-				
-			<% for article in sorted_articles %>
+			
+			<% if @item[:year]%>
+			    <% news_items_to_render = news_items_for_year(@item[:year])%>
+			<% else %>
+			    <% news_items_to_render = sorted_articles[0..8]%>
+			<% end %>
+			
+			<% for article in news_items_to_render %>
     			<div class="blog_content_inner blogBackrpt">
 				<% if article[:picture] != nil %>
     				<img src="/images/<%= article[:picture]%>" width="600" alt="" />
@@ -39,8 +50,13 @@
     			</div><!--/blog_content_inner-->
     		<% end %>	
     		
-			<!--<ul class="pagination">
-				<li><a href="#">&lt;</a></li>
+    		<div class="pagination">
+    		<b>More news</b> (by year):
+			    | <% for y in news_item_years %>
+			    <a href="/news/archive/<%=y%>"><%=y%></a> |
+			    <% end %>
+			</div>
+			<!--<li><a href="#">&lt;</a></li>
 				<li><a href="#">1</a></li>
 				<li>/</li>
 				<li><a href="#">2</a></li>
