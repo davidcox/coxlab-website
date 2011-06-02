@@ -16,6 +16,7 @@ supplemental_links:
       url:    "http://vimeo.com/7945275"
     - title:  "Science Editor's Choice"
       url:  "http://www.sciencemag.org/cgi/content/full/327/5961/13-d?rss=1)"
+pdf:            "pinto_plos09.pdf"
 PMID:           19956750
 ---
 

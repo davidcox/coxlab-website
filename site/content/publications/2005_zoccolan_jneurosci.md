@@ -11,6 +11,7 @@ pages:          8150-8164
 year:           2005
 tags:           ['neuroscience', 'primates', 'physiology']
 link:           "http://www.jneurosci.org/cgi/content/abstract/25/36/8150"
+pdf:            "8150.full.pdf"
 PMID:           16148223
 
 ---

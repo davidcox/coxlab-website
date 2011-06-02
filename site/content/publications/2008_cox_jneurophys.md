@@ -12,6 +12,7 @@ issn:           0022-3077
 year:           2008
 tags:           ['neuroscience', 'methods']
 link:           "http://jn.physiology.org/cgi/reprint/100/5/2966?maxtoshow=&HITS=10&hits=10&RESULTFORMAT=&author1=cox+d&fulltext=microfocal&searchid=1&FIRSTINDEX=0&sortspec=relevance&resourcetype=HWCIT"
+pdf:            "J_Neurophysiol-2008-Cox-2966-76.pdf"
 PMID:           18815345
 
 ---

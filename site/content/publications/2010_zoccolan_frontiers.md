@@ -10,6 +10,7 @@ year:           2010
 doi:            10.3389/fnins.2010.00193
 tags:           ['neuroscience', 'methods', 'rodents']
 link:           "http://admin.frontiersin.org/neuroscience_methods/10.3389/fnins.2010.00193/abstract"
+pdf:            "fnins-04-00193-1.pdf"
 PMID:           21152259
 
 ---

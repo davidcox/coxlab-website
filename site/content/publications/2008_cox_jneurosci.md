@@ -9,6 +9,7 @@ volume:         28
 issue:          40
 pages:          10045-10055
 year:           2008
+pdf:            "10045_full.pdf"
 tags:           ['neuroscience', 'primates', 'physiology', 'featured']
 link:           "http://www.jneurosci.org/cgi/content/abstract/28/40/10045"
 PMID:           18829962

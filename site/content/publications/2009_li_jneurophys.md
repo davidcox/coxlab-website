@@ -12,6 +12,7 @@ issn:           0022-3077
 year:           2009
 tags:           ['neuroscience', 'primates', 'physiology', 'simulation']
 link:           "http://jn.physiology.org/cgi/content/abstract/102/1/360"
+pdf:            "J_Neurophysiol-2009-Li-360-76.pdf"
 PMID:           19439676 
 
 ---

@@ -12,6 +12,7 @@ issn:           1932-6203
 year:           2007
 tags:           ['neuroscience', 'human', 'faces', 'behavior']
 link:           "http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2074890"
+pdf:            "pone.0001223.pdf"
 PMID:           18030351
 ---
 

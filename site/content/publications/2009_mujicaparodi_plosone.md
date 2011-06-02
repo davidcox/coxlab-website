@@ -11,6 +11,7 @@ pages:          e6415
 year:           2009
 tags:           ['neuroscience', 'human', 'fMRI', 'faces']
 link:       "http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0006415"
+pdf:            "journal.pone.0006415.pdf"
 PMID:           19641623
 
 ---

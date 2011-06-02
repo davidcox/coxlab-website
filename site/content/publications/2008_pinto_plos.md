@@ -11,6 +11,7 @@ issue:          1
 doi:            10.1371/journal.pcbi.0040027
 tags:           ['computer vision']
 link:            "http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.0040027"
+pdf:            "pinto_plos08.pdf"
 PMID:           18225950
 
 ---

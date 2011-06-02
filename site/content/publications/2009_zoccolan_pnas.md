@@ -12,6 +12,7 @@ issn:           0027-8424
 year:           2009
 tags:           ['neuroscience', 'rodents', 'behavior', 'featured']
 link:           "http://www.pnas.org/content/early/2009/05/08/0811583106.full.pdf+html"
+pdf:            "PNAS-2009-Zoccolan-0811583106.pdf"
 
 ---
 
