@@ -9,7 +9,7 @@ order:                  1
 ---
 
 <% content_for :summary do %>
-We’re interested in [reverse engineering](/projects/physiology) biological visual systems. However, we would argue that any serious effort to reverse engineer a system should also include a component of forward engineering. For our purposes, this entails attempting to take principles we’ve learned from natural systems and build them into working artificial computer vision systems.
+We’re interested in reverse engineering biological visual systems. However, we would argue that any serious effort to reverse engineer a system should also include a component of forward engineering. For our purposes, this entails attempting to take principles we’ve learned from natural systems and build them into working artificial computer vision systems.
 <% end %>
 
 ![](/images/hierarchy.png) We’re interested in [reverse engineering](/projects/physiology) biological visual systems. However, we would argue that any serious effort to reverse engineer a system should also include a component of forward engineering. For our purposes, this entails attempting to take principles we’ve learned from natural systems and build them into working artificial computer vision systems.
