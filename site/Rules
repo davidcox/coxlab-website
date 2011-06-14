@@ -119,6 +119,7 @@ compile '/publications/*', :rep => :default do
   filter  :kramdown
   layout  'publication_detail'
   filter  :rubypants
+  filter :relativize_paths, :type => :html
 end
 
 
