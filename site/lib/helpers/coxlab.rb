@@ -27,6 +27,10 @@ module Nanoc3::Helpers
       sorted_personnel.find_all{|item| item.identifier =~/staff/}
     end
     
+    def students
+      sorted_personnel.find_all{|item| item.identifier =~/students/}
+    end
+    
     def alumni
       sorted_personnel.find_all{|item| item.identifier =~/alumni/}
     end
