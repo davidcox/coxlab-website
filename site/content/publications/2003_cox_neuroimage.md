@@ -1,7 +1,7 @@
 ---
     
 short_name:     "cox:neuroimage_2003"
-title:          "fMRI Brain Reading: detecting and classifying distributed patterns of fMRI activity in human visual cortex"
+title:          "fMRI 'Brain Reading': detecting and classifying distributed patterns of fMRI activity in human visual cortex"
 authors:        [David D. Cox, Robert Savoy]
 type:           journal
 venue:          NeuroImage

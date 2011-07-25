@@ -9,7 +9,7 @@ volume:         304
 issue:          5667
 pages:          115-117
 year:           2004
-tags:           ['neuroscience', 'human', 'fMRI', 'faces']
+tags:           ['neuroscience', 'human', 'fMRI', 'faces', 'featured']
 pdf:            "Science_CoxMeyersSinha_2004.pdf"
 PMID:           15001712
 
