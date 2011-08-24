@@ -5,6 +5,7 @@ position:               Rowland Fellow, Principal Investigator
 cv_link:                /pdfs/david_cox_cv.pdf
 linkedin_link:          http://www.linkedin.com/in/daviddanielcox
 google_plus_link:       https://plus.google.com/114899445280487106032/about
+posterous_link:         http://davidcox.posterous.com
 twitter_username:       neurobongo
 email:                  cox at rowland dot harvard dot edu
 picture:                dave.jpg

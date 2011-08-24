@@ -21,6 +21,10 @@
 	    <a href="http://www.twitter.com/<%= @person_item[:twitter_username]%>"><img src="/images/twitter.png" style="vertical-align:middle" alt=""/></a>
 	<% end %>
 
+    <% if @person_item[:posterous_link] %>
+	    <a href="<%= @person_item[:posterous_link]%>"><img src="/images/posterous.png" style="vertical-align:middle" alt=""/></a>
+	<% end %>
+
 	
 	<% if @person_item[:cv_link] %>
 	    <b>[<a href="<%= @person_item[:cv_link]%>">cv</a>]</b>
