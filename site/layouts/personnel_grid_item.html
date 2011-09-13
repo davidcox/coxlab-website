@@ -25,6 +25,10 @@
 	    <a href="<%= @person_item[:posterous_link]%>"><img src="/images/posterous.png" style="vertical-align:middle" alt=""/></a>
 	<% end %>
 
+    <% if @person_item[:github_username] %>
+	    <a href="http://github.com/<%= @person_item[:github_username]%>"><img src="/images/github.png" style="vertical-align:middle" alt=""/></a>
+	<% end %>
+
 	
 	<% if @person_item[:cv_link] %>
 	    <b>[<a href="<%= @person_item[:cv_link]%>">cv</a>]</b>
