@@ -109,6 +109,12 @@ compile '/publications/' do
   filter :relativize_paths, :type => :html
 end
 
+compile '/publications', :rep => :bibtex do
+  filter :erb
+  filter :kramdown
+  layout 'publication_bibtex_all'
+end
+
 compile '/publications/*', :rep => :bibtex do
   filter  :erb
   layout  'publication_bibtex'
@@ -202,6 +208,10 @@ end
 
 route '/publications/*', :rep => :bibtex do
   '/publications/bibtex/' + item.identifier.split("/")[-1] + ".bib"
+end
+
+route '/publications', :rep => :bibtex do
+  
 end
 
 # -----------------------------------------------------------------------------

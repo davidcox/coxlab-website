@@ -1,7 +1,4 @@
-<% author_list = latexify_author_list(@item[:authors]) %>
-<% type = @item[:type] %>
-
-
+<% author_list = latexify_author_list(@item[:authors]) %><% type = @item[:type] %>
 <% if type == "journal" %>
 @article{ <%= @item[:short_name] %>,
     author={<%= author_list %>},
@@ -11,6 +8,7 @@
     <% if @item[:issue] %>number={<%= @item[:issue] %>},<% end %>
     <% if @item[:pages] %>pages={<%= @item[:pages] %>},<% end %>
     <% if @item[:issn] %>issn={<%= @item[:issn] %>},<% end %>
+    <% if @item[:pdf] %>note={\url{http://www.rowland.harvard.edu/cox/pdfs/<%= @item[:pdf] %>},<% end %>
     year={<%= @item[:year] %>}
 }
 <% elsif type == "book_chapter" %> 
@@ -19,6 +17,7 @@
     title={{<%= @item[:title] %>}},
     booktitle={<%= @item[:venue] %>},
     <% if @item[:publisher] %>publisher={ <%= @item[:publisher] %> },<% end %>
+    <% if @item[:pdf] %>note={\url{http://www.rowland.harvard.edu/cox/pdfs/<%= @item[:pdf] %>},<% end %>
     year={<%= @item[:year] %>}
 }
 <% elsif type == "conference_paper" %>
@@ -26,6 +25,7 @@
     author={<%= author_list %>},
     title={{<%= @item[:title] %>}},
     booktitle={<%= @item[:venue] %><%if @item[:subvenue]%>, <%=@item[:subvenue]%><%end%>},
+    <% if @item[:pdf] %>note={\url{http://www.rowland.harvard.edu/cox/pdfs/<%= @item[:pdf] %>},<% end %>
     year={<%= @item[:year] %>}
 }
 <% end %>
