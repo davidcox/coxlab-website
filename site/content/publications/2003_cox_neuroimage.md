@@ -9,7 +9,7 @@ volume:         19
 issue:          2
 pages:          261-270
 year:           2003
-tags:           ['neuroscience', 'human', 'fMRI', 'featured']
+tags:           ['neuroscience', 'human', 'fMRI']
 pdf:            "Neuroimage_CoxSavoy_2003.pdf"
 PMID:           12814577
 
