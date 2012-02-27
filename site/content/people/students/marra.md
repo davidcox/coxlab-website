@@ -1,5 +1,5 @@
 ---
 name:           Kyle Marra
 short_name:     marra
-position:       Summer Student, Boston College
+position:       Student Intern, Boston College
 ---

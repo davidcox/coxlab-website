@@ -5,26 +5,26 @@
 </head>
 <body>
 <div id="wrapper">
-	
+
 	<%= render 'header'%>
-	
+
 	<div id="container">
-		
+
 		<% if @item[:year] %>
 		    <%= render 'page_title',  :return_url => "/news",
     		                         :return_name => "News"%>
     	<% else %>
 		    <%= render 'page_title'%>
 		<% end %>
-		
+
 		<div class="blog_content">
-			
+
 			<% if @item[:year]%>
 			    <% news_items_to_render = news_items_for_year(@item[:year])%>
 			<% else %>
 			    <% news_items_to_render = sorted_articles[0..8]%>
 			<% end %>
-			
+
 			<% for article in news_items_to_render %>
     			<div class="blog_content_inner blogBackrpt">
 				<% if article[:picture] != nil %>
@@ -48,8 +48,8 @@
     					<!-- <a href="#" class="continue">Continue Reading &mdash;&rsaquo;</a> -->
     				</div><!--/blog_info-->
     			</div><!--/blog_content_inner-->
-    		<% end %>	
-    		
+    		<% end %>
+
     		<div class="pagination">
     		<b>More news</b> (by year):
     		    | <a href="/news">recent</a>
@@ -74,7 +74,7 @@
 				<li><a href="#">&gt;</a></li>
 			</ul>-->
 		</div><!--/blog_content-->
-		
+
 		<div class="sidebar">
 			<!-- <div class="topsearch"><input name="" type="text" value="to search type and hit enter" onfocus="if(this.value == 'to search type and hit enter'){this.value = '';}" onblur="if(this.value == ''){this.value='to search type and hit enter';}" /></div> --><!--/topsearch-->
 			<div class="sidebar_list">
@@ -84,6 +84,11 @@
                         <li><a href="/tags/<%= t%>"><%= t %>
                             </a></li>
                     <% end %>
+				</ul>
+				<br/>
+				<ul>
+					<li><a href="/atom.xml"><img src="/images/feed-icon-14x14.png"/> news feed</a>
+					</li>
 				</ul>
 				<!--<h4>Pages</h4>
 				<ul>
@@ -123,7 +128,7 @@
 		</div><!--/sidebar-->
 		<div class="clr"></div>
 	</div><!--/container-->
-	
+
 	<%= render 'footer'%>
 </div><!--/wrapper-->
 </body>

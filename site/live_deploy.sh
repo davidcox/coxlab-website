@@ -1,3 +1,3 @@
 rake tags
 nanoc compile
-rake deploy:rsync config=live
+nanoc deploy --target=live

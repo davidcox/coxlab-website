@@ -1,3 +1,3 @@
 rake tags
 nanoc compile
-rake deploy:rsync
+nanoc deploy --target=test

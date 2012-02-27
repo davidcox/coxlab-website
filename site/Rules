@@ -22,6 +22,10 @@ preprocess do
   end
 end
 
+compile '/atom' do
+  filter :erb
+end
+
 compile '/news/archive/*/' do
   filter  :kramdown
   filter  :erb
@@ -66,7 +70,7 @@ compile '/' do
   layout 'index_template'
   filter :relativize_paths, :type => :html
 end
-    
+
 compile '/personnel/' do
   filter :erb
   filter :kramdown
@@ -172,7 +176,7 @@ route '/assets/galleries/*/' do
   if item.identifier.split("/").count == 4
     "/galleries/" + item.identifier.split('/')[3] + "/index.html"
   else
-    "/galleries/" + (item.identifier.chop).split("/")[3..-1].join("/") + 
+    "/galleries/" + (item.identifier.chop).split("/")[3..-1].join("/") +
                   '.' + item[:extension]
   end
 end
@@ -182,7 +186,7 @@ route '/assets/files/*/' do
   if item.identifier.split("/").count == 4
     "/files/" + item.identifier.split('/')[3] + "/index.html"
   else
-    "/files/" + (item.identifier.chop).split("/")[3..-1].join("/") + 
+    "/files/" + (item.identifier.chop).split("/")[3..-1].join("/") +
                   '.' + item[:extension]
   end
 end
@@ -191,15 +195,15 @@ route '/assets/videos/*/' do
   if item.identifier.split("/").count == 4
     "/videos/" + item.identifier.split('/')[3] + "/index.html"
   else
-    "/videos/" + (item.identifier.chop).split("/")[3..-1].join("/") + 
+    "/videos/" + (item.identifier.chop).split("/")[3..-1].join("/") +
                   '.' + item[:extension]
   end
 end
 
 # Route the remaining assets
-route '/assets/*/' do 
+route '/assets/*/' do
   split_up = (item.identifier.chop).split("/")
-    '/' + split_up[2] + '/' + split_up[-1] + '.' + item[:extension] 
+    '/' + split_up[2] + '/' + split_up[-1] + '.' + item[:extension]
 end
 
 # -----------------------------------------------------------------------------
@@ -211,7 +215,14 @@ route '/publications/*', :rep => :bibtex do
 end
 
 route '/publications', :rep => :bibtex do
-  
+
+end
+
+# -----------------------------------------------------------------------------
+# Route the Atom feed
+# -----------------------------------------------------------------------------
+route '/atom' do
+  '/atom.xml'
 end
 
 # -----------------------------------------------------------------------------

@@ -40,8 +40,16 @@ data_sources:
     # same as the items root, but applies to layouts rather than items.
     layouts_root: /
 
+# Parameters for the Atom feed
+base_url: 'http://www.rowland.harvard.edu/cox'
+title: 'Cox Lab News'
+author_name: 'David Cox'
+author_uri: 'http://www.rowland.harvard.edu/cox'
+
 deploy:
-    default:
+    test:
+        kind: rsync
         dst: "coxlab@coxlab.org:/home/coxlab/webapps/rjfsite"
     live:
-        dst: "cox@webmac.rowland.org:/Users/cox/rjf_site" 
+        kind: rsync
+        dst: "cox@webmac.rowland.org:/Users/cox/rjf_site"
