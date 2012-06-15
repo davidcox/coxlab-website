@@ -7,6 +7,7 @@ type:           conference
 venue:          "Innovative Parallel Computing"
 year:           2012
 tags:           ['computer vision', 'featured']
+pdf:            "inpar2012.pdf"
 
 ---
 
