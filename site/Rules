@@ -135,6 +135,7 @@ end
 
 compile '/header/' do
   filter :erb
+  filter :relativize_paths
 end
 
 compile '/redirects/*/' do
