@@ -79,6 +79,15 @@ module Nanoc3::Helpers
     def publications
       pub_items=@items.find_all{|item| item.identifier =~ /publications\/\w+/}
       pub_items=pub_items.find_all{ | item| item[:year] != nil }
+      pub_items.sort!{ | item1, item2 |
+        if item1[:pdf] == nil
+          1
+        elsif item2[:pdf] == nil
+          -1
+        else
+          item1[:pdf] <=> item2[:pdf]
+        end
+      }
       pub_items.sort!{ | item1, item2 | item1[:year] <=> item2[:year] }
       pub_items.reverse!
     end

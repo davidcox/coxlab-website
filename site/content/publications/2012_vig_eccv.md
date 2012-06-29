@@ -7,7 +7,7 @@ type:           conference
 venue:          "European Conference on Computer Vision"
 year:           2012
 tags:           ['computer vision']
-pdf:            "vig_eccv2012.pdf"
+pdf:            "eccv2012_vig.pdf"
 
 ---
 
