@@ -6,8 +6,9 @@ problem_blurb: >
 research_blurb: >
     Our laboratory seeks to understand the computational underpinnings of object recognition through a concerted effort on two fronts. First, we endeavor to understand the workings of biological visual systems using a variety of experimental techniques, ranging from microelectrode recordings to visual psychophysics. Second, we attempt to instantiate what we have learned into artificial object recognition systems, leveraging recent advances in parallel computing to build systems that begin to approach the scale of natural systems. By combining reverse- and forward-engineering approaches, we hope to accelerate progress in both domains.
 
-rowland_blurb: >
-    The Rowland Institute at Harvard is dedicated to experimental science over a broad range of disciplines. Current research is carried out in physics, chemistry, and biology, with an emphasis on interdisciplinary work and the development of new experimental tools. The Institute is located in Cambridge, Massachusetts near the Longfellow Bridge, a few miles downstream from the main campus.
+harvard_blurb: >
+        Our group belongs to Harvard's Department of Molecular and Cellular Biology and the Center Brain Science.  We're located in the Northwest Laboratory
+        on Harvard's main campus in Cambridge, Massachusetts.
 
 ---
 

@@ -49,7 +49,10 @@ author_uri: 'http://www.rowland.harvard.edu/cox'
 deploy:
     test:
         kind: rsync
-        dst: "coxlab@coxlab.org:/home/coxlab/webapps/rjfsite"
+        dst: "coxlab@coxlab.org:/home/coxlab/webapps/testing_site"
     live:
         kind: rsync
-        dst: "cox@webmac.rowland.org:/Users/cox/rjf_site"
+        dst: "coxlab@coxlab.org:/home/coxlab/webapps/lab_site"
+    # live:
+    #     kind: rsync
+    #     dst: "cox@webmac.rowland.org:/Users/cox/rjf_site"
