@@ -2,9 +2,9 @@
 
 short_name:     "chiachia:bmvc_2012"
 title:          "Person-Specific Subspace Analysis for Unconstrained Familiar Face Identification"
-authors:        [Giovani Chiachia, Nicolas Pinto, Anderson, William Schultz, Rocha, Alexandre Falcão, David Cox]
+authors:        [Giovani Chiachia, Nicolas Pinto, William Schwartz, Anderson Rocha, Alexandre Falcão, David Cox]
 type:           conference
-venue:          "British Conference on Machine Vision"
+venue:          "British Machine Vision Conference"
 year:           2012
 tags:           ['computer vision']
 

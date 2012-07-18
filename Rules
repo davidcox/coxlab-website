@@ -99,6 +99,21 @@ compile '/projects/' do
   filter :relativize_paths, :type => :html
 end
 
+
+compile '/resources/*/' do
+  filter :erb
+  filter :kramdown
+  layout 'resource_detail'
+  filter :relativize_paths, :type => :html
+end
+
+compile '/resources/' do
+  filter :kramdown
+  filter :erb
+  layout 'resources_overview'
+  filter :relativize_paths, :type => :html
+end
+
 compile '/news/' do
   filter :erb
   filter :kramdown

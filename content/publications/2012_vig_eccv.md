@@ -1,7 +1,7 @@
 ---
 
 short_name:     "vig:eccv_2012"
-title:          "Saliency-based Space-Variant Descriptor Sampling for Action Recognition"
+title:          "Space-Variant Descriptor Sampling for Action Recognition Based On Saliency and Eye Movements"
 authors:        [Eleonora Vig, Michael Dorr, David Cox]
 type:           conference
 venue:          "European Conference on Computer Vision"

@@ -5,7 +5,6 @@ position:               Assistant Professor, Dept. of Molecular and Cellular Bio
 cv_link:                /pdfs/david_cox_cv.pdf
 linkedin_link:          http://www.linkedin.com/in/daviddanielcox
 google_plus_link:       https://plus.google.com/114899445280487106032/about
-posterous_link:         http://davidcox.posterous.com
 github_username:        davidcox
 twitter_username:       neurobongo
 email:                  davidcox at fas dot harvard dot edu

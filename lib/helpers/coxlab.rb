@@ -54,7 +54,6 @@ module Nanoc3::Helpers
       end
     end
 
-
     def subprojects
       project_list= @items.find_all do |item|
         item.identifier =~ /projects\/subprojects\/\w+/ &&
@@ -71,6 +70,24 @@ module Nanoc3::Helpers
       subprojects.find_all do |item|
         item[:tags] != nil &&
           (item[:tags].count{ |tag| tag =~ /#{Regexp.escape(t)}/ } > 0)
+      end
+    end
+
+
+    def resources
+      resource_list= @items.find_all do |item|
+        item.identifier =~ /^\/resources\/\w+/ && item.identifier !~ /projects\/\w+\/\w/ && item[:active] != false
+      end
+      resource_list.sort do |item1, item2|
+        if item1[:order] && item2[:order]
+          item1[:order] <=> item2[:order]
+        elsif item1[:order]
+          -1
+        elsif item2[:order]
+          1
+        else
+          0
+        end
       end
     end
 
