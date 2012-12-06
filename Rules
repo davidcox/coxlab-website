@@ -108,8 +108,8 @@ compile '/resources/*/' do
 end
 
 compile '/resources/' do
-  filter :kramdown
   filter :erb
+  filter :kramdown
   layout 'resources_overview'
   filter :relativize_paths, :type => :html
 end

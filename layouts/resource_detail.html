@@ -17,10 +17,33 @@
 		<div class="inner_page_container">
 			<div class="project_content">
 
+				<% if @item[:type] %>
+					<b>type:</b> <%= @item[:type] %><br/>
+				<% end %>
+
+				<% if @item[:license] %>
+					<b>license:</b> <%= @item[:license] %><br/>
+				<% end %>
+
+				<br/>
+
 				<div class="project_description">
     				<%= yield %>
 				</div>
 
+				<% if @item[:primary_link] %>
+					<b>Link to resource:<br/>
+					<a href="<%= @item[:primary_link] %>">
+						<%= @item[:primary_link] %></a></b>
+				<% end %>
+
+
+				<% if content_for(@item, :please_cite) != nil %>
+					<div class="please_cite_box">
+						<i>If you use this resource, we ask that you please cite: </i><br/><br/>
+						<b><%= content_for(@item, :please_cite) %></b>
+					</div>
+				<% end %>
 
 			</div><!--/project_content-->
 
@@ -47,14 +70,6 @@
 		</div><!--/inner_page_container-->
 	</div><!--/container-->
 
-
-	<h3>Related Projects</h3>
-    <div class="portfolio_grid">
-	    <% for sp in subprojects_with_tag(@item[:short_name])%>
-	        <% next if sp[:highlight_picture].nil?%>
-		    <%= render 'project_grid_item', :project_item => sp %>
-		<% end %>
-	</div>
 
 	<%= render 'footer' %>
 

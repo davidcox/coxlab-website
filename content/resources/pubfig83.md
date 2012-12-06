@@ -5,13 +5,19 @@ type:       dataset
 url:        http://coxlab.org/resources/pubfig83_first_draft.tar.gz
 related_publications:   ["2011_pinto_cvpr", "2011_pinto_fg", "2009_pinto_cvpr"]
 banner:                 'probe_banner.jpg'
-highlight_picture:      neuron_220x160.jpg
 order:                  0
 ---
 
-<% content_for :summary do %>
-Blah
+<% content_for :please_cite do %>
+Nicolas Pinto, Zak Stone, Todd Zickler, David D. Cox (2011)
+Scaling-up Biologically-Inspired Computer Vision: A Case-Study on Facebook
+IEEE Computer Vision and Pattern Recognition,Workshop on Biologically Consistent Vision
 <% end %>
+
+<% content_for :summary do %>
+PubFig83 is a curated, reconfigured subset of the <a href="http://www.cs.columbia.edu/CAVE/databases/pubfig">PubFig face dataset</a> from Columbia University. PubFig83 was created by Zak Stone in order to support n-way face identifiation experiments.
+<% end %>
+
 
 **PubFig83** is a curated subset of the [PubFig face dataset](http://www.cs.columbia.edu/CAVE/databases/pubfig/) from Columbia University (originally descirbed in [Kumar et al., ICCV 2009](http://www.cs.columbia.edu/CAVE/projects/faceverification/).  PubFig83 was created by Zak Stone, and is described in [Pinto et al., CVPRW 2011](http://www.coxlab.org/publications/2011_pinto_cvpr_ws/).
 

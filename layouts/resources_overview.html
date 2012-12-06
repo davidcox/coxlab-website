@@ -17,10 +17,13 @@
 			<div class="portfolio_content">
 
 				<div class="portfolio_grid">
+
 				    <% for r in resources %>
-    				    <%= render 'project_list_item', :project_item => r %>
+				    	<%= render 'resource_grid_item',
+                                    :resource_item => r %>
     				<% end %>
 				</div>
+
 
 			</div><!--/portfolio_content-->
 

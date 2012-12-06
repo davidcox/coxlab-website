@@ -8,7 +8,7 @@
 	<br/>
 	<h4><b><%= @project_item[:title] %></b></h4>
 	
-	<p><%= @project_item[:content_for_summary] %></p>
+	<p><%= content_for(@project_item, :summary) %></p>
 	</a>
 	
 	<div class="read_more"><a href="<%= @project_item.identifier %>">read more</a></div>
