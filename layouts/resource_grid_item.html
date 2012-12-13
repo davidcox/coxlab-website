@@ -1,0 +1,24 @@
+<div class="resource_grid_item_double">
+
+	<% if resource_item[:highlight_picture] %>
+	    <img src="/images/<%= @resource_item[:highlight_picture]%>" class="left_pic" alt=""/>
+	<% end %>
+	<br/>
+
+	<h4><b><a href="<%= @resource_item[:short_name] %>"><%= @resource_item[:title] %></a></b></h4>
+
+
+	<% if resource_item[:type] %>
+		<b>type:</b> <%= @resource_item[:type] %><br/>
+	<% end %>
+
+	<% if resource_item[:license] %>
+		<b>license:</b> <%= @resource_item[:license] %><br/>
+	<% end %>
+
+	<br/>
+	<p><%= content_for(@resource_item, :summary) %></p>
+	<br/>
+
+</div>
+
