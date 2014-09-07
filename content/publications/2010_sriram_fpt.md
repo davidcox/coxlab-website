@@ -6,7 +6,7 @@ type:           conference_paper
 title:          "Towards an Embedded Visual Object Recognition Processor"
 venue:          "Field Programmable Technology"
 year:           2010
-tags:           ['computer vision', 'gpu', 'fpga', 'featured']
+tags:           ['computer vision', 'gpu', 'fpga']
 pdf:            "fpt2010_final_manuscript.pdf"
 
 ---
