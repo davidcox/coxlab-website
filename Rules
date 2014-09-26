@@ -114,6 +114,13 @@ compile '/resources/' do
   filter :relativize_paths, :type => :html
 end
 
+compile '/saliency/' do
+  filter :erb
+  filter :kramdown
+  layout 'resource_detail'
+  filter :relativize_paths, :type => :html
+end
+
 compile '/news/' do
   filter :erb
   filter :kramdown

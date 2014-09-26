@@ -1,7 +1,8 @@
 ---
-name:           Benjamin Vermaercke
-short_name:     vermaercke
+name:           Ben Vermaercke
+short_name:     ben
 position:       Postdoctoral fellow
+email:          bvermaercke at fas.harvard.edu
 picture:        vermaercke.jpg
-linkedin_link:  http://www.linkedin.com/in/benvermaercke
+linkedin_link:  https://www.linkedin.com/profile/view?id=46970669&trk=spm_pic
 ---

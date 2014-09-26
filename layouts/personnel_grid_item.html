@@ -41,6 +41,12 @@
     <% if @person_item[:web_link] %>
 	    <b>[<a href="<%= @person_item[:web_link]%>">web site</a>]</b>
 	<% end %>
+
+
+	<% if @person_item[:now] %>
+	    <br/><br/>
+	    <b>now:</b> <i><%= @person_item[:now] %></i>
+	<% end %>
 	
 
 	<% if @person_item.compiled_content %>

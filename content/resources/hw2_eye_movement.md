@@ -1,7 +1,7 @@
 ---
 title:  Hollywood 2 Eye Movement Dataset
 type:   dataset
-related_publications:   ["2012_vig_eccv"]
+related_publications:   ["2014_vig_cvpr"]
 short_name:             hw2_eye_movement
 primary_link:          http://dx.doi.org/10.6084/m9.figshare.93951
 license:                CC-BY

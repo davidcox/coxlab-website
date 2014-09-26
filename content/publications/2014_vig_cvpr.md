@@ -7,7 +7,7 @@ type:           conference
 venue:          "IEEE Computer Vision and Pattern Recognition (CVPR)"
 year:           2014
 tags:           ['vision', 'computer vision', 'featured']
-pdf:			2014_vig_cvpr.pdf
+pdf:			cvpr2014_vig_saliency.pdf
 
 ---
 

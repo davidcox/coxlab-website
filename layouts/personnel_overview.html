@@ -47,7 +47,7 @@
 
 
 				<% if students.length > 0 %>
-					<h3> Students </h3>
+					<h3> Graduate Students </h3>
 
 					<div class="portfolio_grid">
 
@@ -59,6 +59,26 @@
 	    				<% end %>
 					</div>
 				<% end %>
+
+
+				<% if undergrads.length > 0 %>
+					<h3> Undergraduate Students </h3>
+
+
+					<ul>
+					<% undergrads.each_with_index do |p, i| %>
+						<li>
+							<b><%= p[:name] %></b> - 
+							  <%= p[:position] %>
+
+						</li>
+
+					<%end%>
+					</ul>
+				<% end %>
+
+
+				<br/><br/><br/>
 
 				<h3> Alumni</h3>
 
@@ -72,6 +92,8 @@
     				<% end %>
 				</div>
 
+
+ 
 			</div><!--/portfolio_content-->
 
 			<!-- SIDEBAR -->

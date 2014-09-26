@@ -23,6 +23,10 @@ module Nanoc3::Helpers
       sorted_personnel.find_all{|item| item.identifier =~/postdoc/}
     end
 
+    def undergrads
+      sorted_personnel.find_all{|item| item.identifier =~/undergrad/}
+    end
+
     def staff
       sorted_personnel.find_all{|item| item.identifier =~/staff/}
     end
