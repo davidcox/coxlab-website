@@ -33,19 +33,6 @@
 				</div>
 
 
-				<h3> Staff </h3>
-
-				<div class="portfolio_grid">
-
-    				<% staff.each_with_index do |p, i| %>
-    				    <%= render 'personnel_grid_item', :person_item => p %>
-    				    <% if i % 2 != 0 %>
-    				        <p class="clr"></p>
-    				    <%end%>
-    				<% end %>
-				</div>
-
-
 				<% if students.length > 0 %>
 					<h3> Graduate Students </h3>
 
@@ -59,6 +46,21 @@
 	    				<% end %>
 					</div>
 				<% end %>
+
+
+
+				<h3> Staff </h3>
+
+				<div class="portfolio_grid">
+
+    				<% staff.each_with_index do |p, i| %>
+    				    <%= render 'personnel_grid_item', :person_item => p %>
+    				    <% if i % 2 != 0 %>
+    				        <p class="clr"></p>
+    				    <%end%>
+    				<% end %>
+				</div>
+
 
 
 				<% if undergrads.length > 0 %>
@@ -82,15 +84,17 @@
 
 				<h3> Alumni</h3>
 
-				<div class="portfolio_grid">
+					<ul>
+					<% alumni.each_with_index do |p, i| %>
+						<li>
+							<b><%= p[:name] %></b> - 
+							  Former <%= p[:position] %>
+							  (now: <%= p[:now] %>)
 
-    				<% alumni.each_with_index do |p, i| %>
-    				    <%= render 'personnel_grid_item', :person_item => p %>
-    				    <% if i % 2 != 0 %>
-    				        <p class="clr"></p>
-    				    <%end%>
-    				<% end %>
-				</div>
+						</li>
+
+					<%end%>
+					</ul>
 
 
  

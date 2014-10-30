@@ -11,6 +11,12 @@
 	<br/>
 	<h5><b><%= @person_item[:name] %></b></h5>
 	<%= @person_item[:position] %><br/>
+
+	<% if @person_item[:program] %>
+	    <a href="<%= @person_item[:program_link]%>"><%= @person_item[:program] %></a>
+	<% end %>
+
+
 	<%= @person_item[:email] %><br/>
 
 	<% if @person_item[:linkedin_link] %>
